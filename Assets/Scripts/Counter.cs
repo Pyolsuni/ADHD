@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Counter : MonoBehaviour
 {
@@ -81,7 +82,7 @@ public class Counter : MonoBehaviour
 
 
         //Joke-ster positions
-        if(Combo < 5)
+        if (Combo < 5)
         {
             Jester0.SetActive(true);
             Jester3.SetActive(false);
@@ -170,6 +171,14 @@ public class Counter : MonoBehaviour
             Queen4.SetActive(false);
             Queen5.SetActive(true);
             QueenText.text = tqueen5;
+        }
+    }
+
+    public void OnScoreUpdate()
+    {
+        if (Score == 0)
+        {
+            SceneManager.LoadScene("Scenes/GameOverScene");
         }
     }
 }
