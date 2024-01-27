@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnerEasy : MonoBehaviour
 {
     public TextAsset beatMapJson;
+    public int BPM;
+
     public GameObject arrowUp;
     public GameObject arrowDown;
     public GameObject arrowLeft;
@@ -33,7 +35,7 @@ public class SpawnerEasy : MonoBehaviour
 
         foreach (ArrowData arrowData in mapData._notes)
         {
-            float spawnTime = arrowData._time * 60 / 100; //Remplacer 127 par le bpm de la musique
+            float spawnTime = arrowData._time * 60 / BPM; //Remplacer 127 par le bpm de la musique
             StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime));
         }
     }
