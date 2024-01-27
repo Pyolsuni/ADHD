@@ -20,21 +20,24 @@ public class ArrowMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag(TagName))
         {
-            /*AudioSource.PlayClipAtPoint(CorrectSound, transform.position);
-            GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;
-            Destroy(DestructionParticles, 3.0f);*/
-            GameObject.Destroy(gameObject);
-        }
-        if (other.gameObject.CompareTag("Wall"))
-        {
-            /*AudioSource.PlayClipAtPoint(MissSound, transform.position);
-            GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;
-            Destroy(DestructionParticles, 3.0f);*/
-            GameObject.Destroy(gameObject);
+            Delete(CorrectSound);
         }
         else
         {
             Debug.Log("Collision not doing anything");
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Delete(MissSound);
+    }
+
+    private void Delete(AudioClip Sound)
+    {
+        AudioSource.PlayClipAtPoint(Sound, transform.position);
+        //GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;
+        //Destroy(DestructionParticles, 3.0f);
+        GameObject.Destroy(gameObject);
     }
 }
