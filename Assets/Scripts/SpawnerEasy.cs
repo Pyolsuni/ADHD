@@ -59,22 +59,22 @@ public class SpawnerEasy : MonoBehaviour
         {
             case 0:
                 GameObject spawnedArrowDown = Instantiate(arrowDown, arrowPosition, Quaternion.identity, transform);
-                spawnedArrowDown.transform.position = new Vector3(-6, -5, 0);
+                spawnedArrowDown.transform.position = new Vector3(-6.5f, -5, 0);
                 spawnedArrowDown.tag = "Down";
                 break;
             case 1:
                 GameObject spawnedArrowUp = Instantiate(arrowUp, arrowPosition, Quaternion.identity, transform);
-                spawnedArrowUp.transform.position = new Vector3(-4, -5, 0);
+                spawnedArrowUp.transform.position = new Vector3(-4.5f, -5, 0);
                 spawnedArrowUp.tag = "Up";
                 break;
             case 2:
                 GameObject spawnedArrowLeft = Instantiate(arrowLeft, arrowPosition, Quaternion.identity, transform);
-                spawnedArrowLeft.transform.position = new Vector3(-8, -5, 0);
+                spawnedArrowLeft.transform.position = new Vector3(-8.5f, -5, 0);
                 spawnedArrowLeft.tag = "Left";
                 break;
             case 3:
                 GameObject spawnedArrowRight = Instantiate(arrowRight, arrowPosition, Quaternion.identity, transform);
-                spawnedArrowRight.transform.position = new Vector3(-2, -5, 0);
+                spawnedArrowRight.transform.position = new Vector3(-2.5f, -5, 0);
                 spawnedArrowRight.tag = "Right";
                 break;
             default:
