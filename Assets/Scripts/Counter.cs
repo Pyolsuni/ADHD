@@ -15,6 +15,7 @@ public class Counter : MonoBehaviour
 
     private int combo;
     private bool gameOver = false;
+    private bool gamePaused = false;
 
     public GameObject Jester0;
     public GameObject Jester3;
@@ -80,6 +81,13 @@ public class Counter : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gamePaused = !gamePaused;
+            Time.timeScale = gamePaused ? 0 : 1;
+            // Open/close pause menu
+        }
+
         float currentScore = Mathf.SmoothDamp(Laughbar.value, Score, ref sliderVelocity, 100 * Time.deltaTime);
         Laughbar.value = currentScore;
 
