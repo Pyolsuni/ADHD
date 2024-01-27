@@ -3548,7 +3548,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1666383155}
+        m_TargetAssemblyTypeName: Counter, Assembly-CSharp
+        m_MethodName: OnScoreUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &782526513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
