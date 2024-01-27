@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class SpawnerHard : MonoBehaviour
 {
     public TextAsset beatMapJson;
     public GameObject arrowPrefab;
@@ -58,7 +58,7 @@ public class Spawner : MonoBehaviour
     private void SpawnBlock(ArrowData arrowData)
     {
         float xPosition = -(arrowData._lineIndex * spacingX - offsetX); //Added offset so that it is centered
-        Vector3 arrowPosition = new Vector3(xPosition, 0, 0);
+        Vector3 arrowPosition = new Vector3(xPosition, -5, 0);
 
         GameObject spawnedArrow = Instantiate(arrowPrefab, arrowPosition, Quaternion.identity, transform);
 
@@ -67,15 +67,19 @@ public class Spawner : MonoBehaviour
         {
             case 0:
                 spawnedArrow.transform.Rotate(0, 0, 180);
+                spawnedArrow.tag = "Down";
                 break;
             case 1:
                 spawnedArrow.transform.Rotate(0, 0, 0);
+                spawnedArrow.tag = "Up";
                 break;
             case 2:
                 spawnedArrow.transform.Rotate(0, 0, 90);
+                spawnedArrow.tag = "Left";
                 break;
             case 3:
                 spawnedArrow.transform.Rotate(0, 0, -90);
+                spawnedArrow.tag = "Right";
                 break;
             default:
                 Debug.LogWarning($"Invalid arrow type: {arrowData._cutDirection}");
