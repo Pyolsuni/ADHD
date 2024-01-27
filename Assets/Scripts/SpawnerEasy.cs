@@ -61,22 +61,22 @@ public class SpawnerEasy : MonoBehaviour
         {
             case 0:
                 spawnedArrow.transform.Rotate(0, 0, 180);
-                spawnedArrow.transform.position = new Vector3(-9, -5, 0);
+                spawnedArrow.transform.position = new Vector3(-6, -5, 0);
                 spawnedArrow.tag = "Down";
                 break;
             case 1:
                 spawnedArrow.transform.Rotate(0, 0, 0);
-                spawnedArrow.transform.position = new Vector3(-7, -5, 0);
+                spawnedArrow.transform.position = new Vector3(-4, -5, 0);
                 spawnedArrow.tag = "Up";
                 break;
             case 2:
                 spawnedArrow.transform.Rotate(0, 0, 90);
-                spawnedArrow.transform.position = new Vector3(-11, -5, 0);
+                spawnedArrow.transform.position = new Vector3(-8, -5, 0);
                 spawnedArrow.tag = "Left";
                 break;
             case 3:
                 spawnedArrow.transform.Rotate(0, 0, -90);
-                spawnedArrow.transform.position = new Vector3(-5, -5, 0);
+                spawnedArrow.transform.position = new Vector3(-2, -5, 0);
                 spawnedArrow.tag = "Right";
                 break;
             default:
