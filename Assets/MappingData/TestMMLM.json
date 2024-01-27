@@ -1,0 +1,165 @@
+{
+    "_customData": {
+        "_bookmarks": [
+        ],
+        "_BPMChanges": [
+        ],
+        "_time": 1
+    },
+    "_events": [
+    ],
+    "_notes": [
+        {
+            "_cutDirection": 0,
+            "_lineIndex": 1,
+            "_lineLayer": 1,
+            "_time": 0,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 3,
+            "_lineIndex": 3,
+            "_lineLayer": 1,
+            "_time": 0,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 0,
+            "_lineLayer": 1,
+            "_time": 2,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 2,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 2,
+            "_lineIndex": 0,
+            "_lineLayer": 1,
+            "_time": 4,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 3,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 4,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 0,
+            "_lineIndex": 1,
+            "_lineLayer": 1,
+            "_time": 6,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 0,
+            "_lineIndex": 3,
+            "_lineLayer": 1,
+            "_time": 6,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 0,
+            "_lineLayer": 1,
+            "_time": 9,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 9,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 3,
+            "_lineIndex": 3,
+            "_lineLayer": 1,
+            "_time": 11,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 2,
+            "_lineIndex": 0,
+            "_lineLayer": 1,
+            "_time": 13,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 14,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 1,
+            "_lineLayer": 1,
+            "_time": 16,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 0,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 18,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 3,
+            "_lineIndex": 3,
+            "_lineLayer": 1,
+            "_time": 20,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 2,
+            "_lineIndex": 0,
+            "_lineLayer": 1,
+            "_time": 22,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 2,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 24,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 3,
+            "_lineIndex": 1,
+            "_lineLayer": 1,
+            "_time": 26,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 1,
+            "_lineIndex": 2,
+            "_lineLayer": 1,
+            "_time": 27,
+            "_type": 0
+        },
+        {
+            "_cutDirection": 0,
+            "_lineIndex": 0,
+            "_lineLayer": 1,
+            "_time": 30,
+            "_type": 0
+        }
+    ],
+    "_obstacles": [
+    ],
+    "_version": "2.2.0",
+    "_waypoints": [
+    ]
+}
