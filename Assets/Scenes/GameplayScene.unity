@@ -973,7 +973,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5632,6 +5632,7 @@ MonoBehaviour:
   Queen3: {fileID: 1466762339}
   Queen4: {fileID: 498412292}
   Queen5: {fileID: 358445515}
+  QueenText: {fileID: 125520151}
 --- !u!1 &1669564082
 GameObject:
   m_ObjectHideFlags: 0

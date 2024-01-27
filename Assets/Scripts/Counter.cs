@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class Counter : MonoBehaviour
 {
@@ -24,6 +25,14 @@ public class Counter : MonoBehaviour
     public GameObject Queen3;
     public GameObject Queen4;
     public GameObject Queen5;
+
+    public TextMeshProUGUI QueenText;
+    private string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
+    private string tqueen1 = "A jester of thy caliber belongs in the shadows, not the spotlight.";
+    private string tqueen2 = "Thou shall Make Me Laugh More.";
+    private string tqueen3 = "A rustic charm, fit for those with simpler inclinations.";
+    private string tqueen4 = "You know, you are more nimble than you look.";
+    private string tqueen5 = "Thy dance hath stirred laughter in our souls, a merry jig of jests!";
 
     public int Combo
     {
@@ -110,6 +119,7 @@ public class Counter : MonoBehaviour
             Queen3.SetActive(false);
             Queen4.SetActive(false);
             Queen5.SetActive(false);
+            QueenText.text = tqueen0;
         }
         else if (Score < 25) 
         { 
@@ -119,6 +129,7 @@ public class Counter : MonoBehaviour
             Queen3.SetActive(false);
             Queen4.SetActive(false);
             Queen5.SetActive(false);
+            QueenText.text = tqueen1;
         }
         else if (Score < 45)
         {
@@ -128,6 +139,7 @@ public class Counter : MonoBehaviour
             Queen3.SetActive(false);
             Queen4.SetActive(false);
             Queen5.SetActive(false);
+            QueenText.text = tqueen2;
         }
         else if (Score < 65)
         {
@@ -137,6 +149,7 @@ public class Counter : MonoBehaviour
             Queen3.SetActive(true);
             Queen4.SetActive(false);
             Queen5.SetActive(false);
+            QueenText.text = tqueen3;
         }
         else if (Score < 85)
         {
@@ -146,6 +159,7 @@ public class Counter : MonoBehaviour
             Queen3.SetActive(false);
             Queen4.SetActive(true);
             Queen5.SetActive(false);
+            QueenText.text = tqueen4;
         }
         else
         {
@@ -155,6 +169,7 @@ public class Counter : MonoBehaviour
             Queen3.SetActive(false);
             Queen4.SetActive(false);
             Queen5.SetActive(true);
+            QueenText.text = tqueen5;
         }
     }
 }
