@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ArrowMovement : MonoBehaviour
 {
     public float speed = 1f;
     public Vector3 Arrow_Movement;
     public AudioClip MissSound;
-    public Transform Destruction;
-    public string TagName;
+    //public Transform Destruction;
+    //public string TagName;
 
     void Update()
     {
@@ -35,16 +37,19 @@ public class ArrowMovement : MonoBehaviour
         }
     }*/
 
-    private void OnBecameInvisible()
+    /*private void OnBecameInvisible()
     {
-        Delete(MissSound);
-    }
+        Delete(MissSound, -0, 0);
+        Counter.Instance.Combo = 0;
+    }*/
 
-    public void Delete(AudioClip Sound)
+    public void Delete(AudioClip Sound, int points, int combo)
     {
         AudioSource.PlayClipAtPoint(Sound, transform.position);
         //GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;
         //Destroy(DestructionParticles, 3.0f);
         GameObject.Destroy(gameObject);
+        Counter.Instance.Combo += combo;
+        Counter.Instance.Score += points;
     }
 }

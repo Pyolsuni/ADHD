@@ -31,7 +31,7 @@ public class Counter : MonoBehaviour
         }
         set
         {
-            score = value;
+            score = Mathf.Min(value,100);
             HUDBar.instance.SetScore(score);
         }
     }
@@ -39,7 +39,7 @@ public class Counter : MonoBehaviour
     void Start()
     {
         Combo = 0;
-        Score = 10;
+        Score = 50;
     }
 
     private void Awake()
