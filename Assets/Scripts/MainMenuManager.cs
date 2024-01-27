@@ -10,7 +10,6 @@ public class MainMenuManager : MonoBehaviour
     public GameObject mainMenuButtons;
     public GameObject difficultyButtons;
     public GameObject creditsPanel;
-    public GameObject optionsPanel;
     private Slider volumeSlider;
 
     void Start()
@@ -18,7 +17,6 @@ public class MainMenuManager : MonoBehaviour
         mainMenuButtons.SetActive(true);
         difficultyButtons.SetActive(false);
         creditsPanel.SetActive(false);
-        optionsPanel.SetActive(false);
 
         volumeSlider = FindObjectOfType<Slider>();
 
@@ -57,18 +55,6 @@ public class MainMenuManager : MonoBehaviour
     {
         Debug.Log("close credits button pressed");
         creditsPanel.SetActive(false);
-    }
-
-    public void OnOpenOptionsButtonPressed()
-    {
-        Debug.Log("open options button pressed");
-        optionsPanel.SetActive(true);
-    }
-
-    public void OnCloseOptionsButtonPressed()
-    {
-        Debug.Log("close options button pressed");
-        optionsPanel.SetActive(false);
     }
 
     public void OnExitButtonPressed()
