@@ -6,7 +6,6 @@ public class ArrowMovement : MonoBehaviour
 {
     public float speed = 1f;
     public Vector3 Arrow_Movement;
-    public AudioClip CorrectSound;
     public AudioClip MissSound;
     public Transform Destruction;
     public string TagName;
@@ -16,9 +15,17 @@ public class ArrowMovement : MonoBehaviour
         transform.position += (Arrow_Movement * Time.deltaTime * speed);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag(TagName))
+        if (other.gameObject.CompareTag("Perfect"))
+        {
+            Delete(CorrectSound);
+        }
+        if (other.gameObject.CompareTag("Good"))
+        {
+            Delete(CorrectSound);
+        }
+        if (other.gameObject.CompareTag("Ok"))
         {
             Delete(CorrectSound);
         }
@@ -26,14 +33,14 @@ public class ArrowMovement : MonoBehaviour
         {
             Debug.Log("Collision not doing anything");
         }
-    }
+    }*/
 
     private void OnBecameInvisible()
     {
         Delete(MissSound);
     }
 
-    private void Delete(AudioClip Sound)
+    public void Delete(AudioClip Sound)
     {
         AudioSource.PlayClipAtPoint(Sound, transform.position);
         //GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;

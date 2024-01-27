@@ -50,9 +50,6 @@ public class SpawnerHard : MonoBehaviour
         }
 
         SpawnBlock(arrowData);
-        Debug.Log(startTime);
-        Debug.Log(elapsedTime);
-        Debug.Log(spawnTime);
     }
 
     private void SpawnBlock(ArrowData arrowData)

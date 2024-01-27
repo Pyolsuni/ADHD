@@ -9,6 +9,9 @@ TagManager:
   - Left
   - Right
   - Wall
+  - Perfect
+  - Good
+  - Ok
   layers:
   - Default
   - TransparentFX
