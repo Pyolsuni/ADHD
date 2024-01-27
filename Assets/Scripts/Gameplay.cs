@@ -19,6 +19,8 @@ public class Gameplay : MonoBehaviour
     public float DistanceGood;
     public float DistanceOk;
 
+    public KeyCode keyCode;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,7 @@ public class Gameplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && arrowin != null)
+        if (Input.GetKeyDown(keyCode) && arrowin != null)
         {
             Vector3 posA = arrowin.transform.position;
             Debug.Log(posA);

@@ -39,7 +39,7 @@ public class Counter : MonoBehaviour
     void Start()
     {
         Combo = 0;
-        Score = 0;
+        Score = 10;
     }
 
     private void Awake()
