@@ -1624,7 +1624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatMapJson: {fileID: 4900000, guid: 791836616ebb47c4581ccf4649728bed, type: 3}
-  arrowPrefab: {fileID: 3676873258026586912, guid: 01658a8290ce9ba4190d6db7055fa4d9, type: 3}
+  arrowUp: {fileID: 0}
+  arrowDown: {fileID: 0}
+  arrowLeft: {fileID: 0}
+  arrowRight: {fileID: 0}
 --- !u!1 &534922614
 GameObject:
   m_ObjectHideFlags: 0
