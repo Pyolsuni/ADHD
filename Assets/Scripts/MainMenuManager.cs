@@ -7,12 +7,17 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
 
+    public GameObject mainMenuButtons;
+    public GameObject difficultyButtons;
     public GameObject creditsPanel;
     private Slider volumeSlider;
 
     void Start()
     {
+        mainMenuButtons.SetActive(true);
+        difficultyButtons.SetActive(false);
         creditsPanel.SetActive(false);
+
         volumeSlider = FindObjectOfType<Slider>();
 
         float volume = PlayerPrefs.GetFloat("volume", 1.0f);
@@ -22,7 +27,22 @@ public class MainMenuManager : MonoBehaviour
     public void OnPlayButtonPressed()
     {
         Debug.Log("play button pressed");
+        mainMenuButtons.SetActive(false);
+        difficultyButtons.SetActive(true);
+    }
+
+    public void OnDiffucultyChoicePressed(int difficulty)
+    {
+        Debug.Log("difficulty chosen: " + difficulty);
+        PlayerPrefs.SetInt("difficulty", difficulty);
         SceneManager.LoadScene("Scenes/GameplayScene");
+    }
+
+    public void OnDifficultyBackPressed()
+    {
+        Debug.Log("difficulty back button pressed");
+        mainMenuButtons.SetActive(true);
+        difficultyButtons.SetActive(false);
     }
 
     public void OnOpenCreditsButtonPressed()
