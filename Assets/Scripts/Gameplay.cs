@@ -19,6 +19,12 @@ public class Gameplay : MonoBehaviour
     public float DistanceGood;
     public float DistanceOk;
 
+    public int PerfectPoint;
+    public int GoodPoint;
+    public int OkPoint;
+
+    private int combo = 1;
+
     public KeyCode keyCode;
 
     // Start is called before the first frame update
@@ -45,17 +51,17 @@ public class Gameplay : MonoBehaviour
 
             if(distance < DistancePerfect)
             {
-                arrowin.GetComponent<ArrowMovement>().Delete(PerfectSound);
+                arrowin.GetComponent<ArrowMovement>().Delete(PerfectSound, PerfectPoint, combo);
                 Debug.Log("Perfect Distance");
             }
             else if (distance < DistanceGood)
             {
-                arrowin.GetComponent<ArrowMovement>().Delete(GoodSound);
+                arrowin.GetComponent<ArrowMovement>().Delete(GoodSound, GoodPoint, combo);
                 Debug.Log("Good Distance");
             }
             else
             {
-                arrowin.GetComponent<ArrowMovement>().Delete(OkSound);
+                arrowin.GetComponent<ArrowMovement>().Delete(OkSound, OkPoint, combo);
                 Debug.Log("Ok Distance");
             }
             
@@ -72,11 +78,11 @@ public class Gameplay : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         arrowin = other.gameObject;
-        Debug.Log("Cube entered hitbox");
+        Debug.Log("Arrow entered hitbox");
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         arrowin = null;
-        Debug.Log("Cube left hitbox");
+        Debug.Log("Arrow left hitbox");
     }
 }
