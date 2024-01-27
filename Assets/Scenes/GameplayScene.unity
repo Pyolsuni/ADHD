@@ -2435,7 +2435,7 @@ GameObject:
   - component: {fileID: 530761139}
   m_Layer: 0
   m_Name: ArrowSpawnerEasy
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3548,19 +3548,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1666383155}
-        m_TargetAssemblyTypeName: Counter, Assembly-CSharp
-        m_MethodName: OnScoreUpdate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &782526513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
@@ -5594,6 +5582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666383154}
   - component: {fileID: 1666383155}
+  - component: {fileID: 1666383156}
   m_Layer: 0
   m_Name: Gameplay
   m_TagString: Untagged
@@ -5644,7 +5633,24 @@ MonoBehaviour:
   Queen3: {fileID: 1466762339}
   Queen4: {fileID: 498412292}
   Queen5: {fileID: 358445515}
+  gameOverAnimation: {fileID: 1666383156}
   QueenText: {fileID: 125520151}
+--- !u!111 &1666383156
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666383153}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c94d5da3b05860f4f802b121fd50507e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c94d5da3b05860f4f802b121fd50507e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1669564082
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,7 +6644,7 @@ GameObject:
   - component: {fileID: 2030400691}
   m_Layer: 0
   m_Name: ArrowSpawnerHard
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

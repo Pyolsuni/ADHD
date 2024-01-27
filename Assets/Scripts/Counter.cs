@@ -14,6 +14,7 @@ public class Counter : MonoBehaviour
     public float sliderVelocity = 0;
 
     private int combo;
+    private bool gameOver = false;
 
     public GameObject Jester0;
     public GameObject Jester3;
@@ -26,6 +27,8 @@ public class Counter : MonoBehaviour
     public GameObject Queen3;
     public GameObject Queen4;
     public GameObject Queen5;
+
+    public Animation gameOverAnimation;
 
     public TextMeshProUGUI QueenText;
     private string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
@@ -172,13 +175,51 @@ public class Counter : MonoBehaviour
             Queen5.SetActive(true);
             QueenText.text = tqueen5;
         }
+
+        if (score == 0 && !gameOver)
+        {
+            gameOver = true;
+
+            // Pause spawners and arrows
+            DisableArrowsForTag("Up");
+            DisableArrowsForTag("Left");
+            DisableArrowsForTag("Right");
+            DisableArrowsForTag("Down");
+
+            DisableSpawners();
+
+            // Play the game over animation
+            gameOverAnimation.Play();
+        }
     }
 
-    public void OnScoreUpdate()
+    public void LoadGameOverScene()
     {
-        if (Score == 0)
+        SceneManager.LoadScene("Scenes/GameOverScene");
+    }
+
+    private void DisableArrowsForTag(string tag)
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag(tag))
         {
-            SceneManager.LoadScene("Scenes/GameOverScene");
-        }
+            item.GetComponent<ArrowMovement>().enabled = false;
+        };
+    }
+
+    private void DisableSpawners()
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag("Spawner"))
+        {
+            if (item.GetComponent<SpawnerEasy>() != null)
+            {
+                item.GetComponent<SpawnerEasy>().StopSpawner();
+                Debug.Log("Stopped easy spawner");
+            }
+            if (item.GetComponent<SpawnerHard>() != null)
+            {
+                item.GetComponent<SpawnerHard>().StopSpawner();
+                Debug.Log("Stopped easy spawner");
+            }
+        };
     }
 }

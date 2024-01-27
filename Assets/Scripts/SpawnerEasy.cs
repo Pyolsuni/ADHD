@@ -11,6 +11,7 @@ public class SpawnerEasy : MonoBehaviour
     public GameObject arrowRight;
 
     private MapData mapData;
+    private List<Coroutine> spawnerCoroutines = new List<Coroutine>();
 
     [System.Serializable]
     public class ArrowData
@@ -34,7 +35,7 @@ public class SpawnerEasy : MonoBehaviour
         foreach (ArrowData arrowData in mapData._notes)
         {
             float spawnTime = arrowData._time * 60 / 100; //Remplacer 127 par le bpm de la musique
-            StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime));
+            spawnerCoroutines.Add(StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime)));
         }
     }
 
@@ -81,5 +82,10 @@ public class SpawnerEasy : MonoBehaviour
                 Debug.LogWarning($"Invalid arrow type: {arrowData._lineIndex}");
                 return;
         }
+    }
+
+    public void StopSpawner()
+    {
+        spawnerCoroutines.ForEach(coroutine => { if (coroutine != null) { StopCoroutine(coroutine); } });
     }
 }
