@@ -14,15 +14,14 @@ public class Gameplay : MonoBehaviour
 
     public AudioClip PerfectSound;
     public AudioClip GoodSound;
-    public AudioClip OkSound;
+    public AudioClip MissSound;
 
     public float DistancePerfect;
     public float DistanceGood;
-    public float DistanceOk;
 
     public int PerfectPoint;
     public int GoodPoint;
-    public int OkPoint;
+    public int MissPoint = -5;
 
     public KeyCode keyCode;
 
@@ -65,8 +64,9 @@ public class Gameplay : MonoBehaviour
             }
             else
             {
-                arrowin.GetComponent<ArrowMovement>().Delete(OkSound, OkPoint, combo);
+                arrowin.GetComponent<ArrowMovement>().Delete(MissSound, MissPoint, 0);
                 Debug.Log("Ok Distance");
+                Counter.Instance.Combo = 0;
             }
             
 

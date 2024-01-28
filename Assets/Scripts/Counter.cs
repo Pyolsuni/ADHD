@@ -16,7 +16,8 @@ public class Counter : MonoBehaviour
     private int combo;
     private bool gameOver = false;
     private bool gamePaused = false;
-    private int Diff;
+    private int diff;
+    private float endTime;
 
     /*
     public GameObject Jester0;
@@ -80,21 +81,27 @@ public class Counter : MonoBehaviour
     {
 
         Debug.Log(PlayerPrefs.GetInt("difficulty"));
-        Diff = PlayerPrefs.GetInt("difficulty", 0);
-        Debug.Log(Diff);
+        diff = PlayerPrefs.GetInt("difficulty", 0);
+        Debug.Log(diff);
         Combo = 0;
         Score = 30;
 
-        if (Diff == 0)
+
+        AudioSource currentMusic = null;
+        if (diff == 0)
         {
             ArrowSpawner_Easy.SetActive(true);
-            Music_Easy.Play();
+            currentMusic = Music_Easy;
         }
-        if (Diff == 1)
+        if (diff == 1)
         {
             ArrowSpawner_Hard.SetActive(true);
-            Music_Hard.Play();
+            currentMusic = Music_Hard;
         }
+        currentMusic.Play();
+
+        endTime = Time.time + currentMusic.clip.length + 2;
+        Debug.Log(endTime);
     }
 
     private void Awake()
@@ -113,7 +120,7 @@ public class Counter : MonoBehaviour
             // Open/close pause menu
 
             AudioSource currentMusic = null;
-            if (Diff == 0)
+            if (diff == 0)
             {
                 currentMusic = Music_Easy;
             }
@@ -250,6 +257,13 @@ public class Counter : MonoBehaviour
 
             // Play the game over animation
             animationPlayer.Play("delayed_game_over_scene_change");
+        }
+
+        if (Time.time > endTime && !gameOver)
+        {
+            gameOver = true;
+            //animationPlayer.Play("delayed_win_scene_change");
+            LoadWinScene();
         }
     }
 
