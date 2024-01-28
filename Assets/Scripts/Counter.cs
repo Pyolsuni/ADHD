@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Counter : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Counter : MonoBehaviour
     private int combo;
     private bool gameOver = false;
     private bool gamePaused = false;
+    private bool comboGotten = false;
     private int diff;
     private float endTime;
 
@@ -37,6 +39,8 @@ public class Counter : MonoBehaviour
     public GameObject ArrowSpawner_Easy;
     public AudioSource Music_Hard;
     public AudioSource Music_Easy;
+
+    public AudioClip getStreak;
 
     public TextMeshProUGUI QueenText;
     private readonly string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
@@ -144,6 +148,11 @@ public class Counter : MonoBehaviour
         }
         else if (Combo >= 20)
         {
+            if (!comboGotten)
+            {
+                comboGotten = true;
+                AudioSource.PlayClipAtPoint(getStreak, transform.position);
+            }
             Crowd0.SetActive(true);
             Crowd1.SetActive(true);
             Crowd2.SetActive(true);
@@ -151,6 +160,7 @@ public class Counter : MonoBehaviour
         }
         else
         {
+            comboGotten = false;
             Crowd0.SetActive(false);
             Crowd1.SetActive(false);
             Crowd2.SetActive(false);
@@ -254,6 +264,7 @@ public class Counter : MonoBehaviour
         gamePaused = !gamePaused;
 
         Time.timeScale = gamePaused ? 0 : 1;
+        Debug.Log("timeScale set to: " + Time.timeScale);
 
         AudioSource currentMusic = null;
         if (diff == 0)
@@ -279,16 +290,19 @@ public class Counter : MonoBehaviour
 
     public void LoadWinScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/WinScene");
     }
 
     public void LoadGameOverScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/GameOverScene");
     }
 
     public void LoadMenuScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/MenuScene");
     }
 

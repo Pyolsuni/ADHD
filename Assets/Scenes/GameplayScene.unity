@@ -1515,7 +1515,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 1359ddf52909dbb4192e324e6408bae6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2103,6 +2103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2802,6 +2806,7 @@ MonoBehaviour:
   arrowDown: {fileID: 628983175157421876, guid: 3e108072bdac0c54798f0b36a6f2f7ce, type: 3}
   arrowLeft: {fileID: 3454969674345397948, guid: af1bec4a495610745a779c26251af8d7, type: 3}
   arrowRight: {fileID: 7886039532050575325, guid: 07489655a9c8fca4c85269937645eb7e, type: 3}
+  delay: 2.667
 --- !u!1 &534922614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,9 +2903,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -2909,6 +2918,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
@@ -3316,7 +3329,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: e3fa4a315dbf52a4da378f0b2ac210ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3785,7 +3798,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2067703473}
   m_Father: {fileID: 1650960226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &685325826
@@ -5732,7 +5746,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2145129433}
   m_Father: {fileID: 1650960226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1267320471
@@ -6195,6 +6210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6652,7 +6671,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5baffae8eab075046ad1099c310083d1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cfd78da6c34cd8d49892757d4df8d017, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7182,9 +7201,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -7193,6 +7216,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
@@ -7322,6 +7349,7 @@ MonoBehaviour:
   ArrowSpawner_Easy: {fileID: 530761137}
   Music_Hard: {fileID: 521393011}
   Music_Easy: {fileID: 1497526297}
+  getStreak: {fileID: 8300000, guid: 60884e3f0e749714aae5bde9b5a662f7, type: 3}
   QueenText: {fileID: 125520151}
   pausePanel: {fileID: 1923393735}
 --- !u!111 &1666383156
@@ -7388,6 +7416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7756,6 +7788,7 @@ MonoBehaviour:
   arrowDown: {fileID: 628983175157421876, guid: 3e108072bdac0c54798f0b36a6f2f7ce, type: 3}
   arrowLeft: {fileID: 3454969674345397948, guid: af1bec4a495610745a779c26251af8d7, type: 3}
   arrowRight: {fileID: 7886039532050575325, guid: 07489655a9c8fca4c85269937645eb7e, type: 3}
+  delay: 2.667
 --- !u!1001 &1712969485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7781,9 +7814,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -7792,6 +7829,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
@@ -8292,7 +8333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 9a743f2cd950d664983191650fa3721c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9433,6 +9474,174 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &2067703472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067703473}
+  - component: {fileID: 2067703474}
+  m_Layer: 0
+  m_Name: CrowdWave2Person2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067703473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067703472}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685325825}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2067703474
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067703472}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 6c41209217dc43549b174839d7f25db5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.74, y: 7.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &2145129432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145129433}
+  - component: {fileID: 2145129434}
+  m_Layer: 0
+  m_Name: CrowdWave1person2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145129433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145129432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1267320470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2145129434
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145129432}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: de39e98b6cfe1624a9afd154d8780a3f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.74, y: 7.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &8024378569428287616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9445,6 +9654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9515,9 +9728,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -9526,6 +9743,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
