@@ -17,6 +17,7 @@ public class Counter : MonoBehaviour
     private int combo;
     private bool gameOver = false;
     private bool gamePaused = false;
+    private bool comboGotten = false;
     private int diff;
     private float endTime;
 
@@ -147,7 +148,11 @@ public class Counter : MonoBehaviour
         }
         else if (Combo >= 20)
         {
-            AudioSource.PlayClipAtPoint(getStreak, transform.position);
+            if (!comboGotten)
+            {
+                comboGotten = true;
+                AudioSource.PlayClipAtPoint(getStreak, transform.position);
+            }
             Crowd0.SetActive(true);
             Crowd1.SetActive(true);
             Crowd2.SetActive(true);
@@ -155,6 +160,7 @@ public class Counter : MonoBehaviour
         }
         else
         {
+            comboGotten = false;
             Crowd0.SetActive(false);
             Crowd1.SetActive(false);
             Crowd2.SetActive(false);
