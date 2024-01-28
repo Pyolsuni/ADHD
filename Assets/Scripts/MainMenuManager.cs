@@ -10,7 +10,6 @@ public class MainMenuManager : MonoBehaviour
     public GameObject mainMenuButtons;
     public GameObject difficultyButtons;
     public GameObject creditsPanel;
-    private Slider volumeSlider;
 
     void Start()
     {
@@ -19,11 +18,6 @@ public class MainMenuManager : MonoBehaviour
         mainMenuButtons.SetActive(true);
         difficultyButtons.SetActive(false);
         creditsPanel.SetActive(false);
-
-        volumeSlider = FindObjectOfType<Slider>();
-
-        float volume = PlayerPrefs.GetFloat("volume", 1.0f);
-        volumeSlider.value = volume;
     }
 
     public void OnPlayButtonPressed()
@@ -63,14 +57,6 @@ public class MainMenuManager : MonoBehaviour
     {
         Debug.Log("exit button pressed");
         Application.Quit();
-    }
-
-    public void OnVolumeSliderChanged()
-    {
-        float volume = volumeSlider.value;
-        Debug.Log("volume changed: " + volume);
-        AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("volume", volume);
     }
 }
 

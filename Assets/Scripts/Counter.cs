@@ -46,6 +46,8 @@ public class Counter : MonoBehaviour
     private readonly string tqueen4 = "You know, you are more nimble than you look.";
     private readonly string tqueen5 = "Thy dance hath stirred laughter in our souls, a merry jig of jests!";
 
+    public RectTransform pausePanel;
+
     public int Combo
     {
         get
@@ -77,13 +79,13 @@ public class Counter : MonoBehaviour
 
     void Start()
     {
+        pausePanel.gameObject.SetActive(false);
 
         Debug.Log(PlayerPrefs.GetInt("difficulty"));
         diff = PlayerPrefs.GetInt("difficulty", 0);
         Debug.Log(diff);
         Combo = 0;
         Score = 30;
-
 
         AudioSource currentMusic = null;
         if (diff == 0)
@@ -111,30 +113,7 @@ public class Counter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gamePaused = !gamePaused;
-            Time.timeScale = gamePaused ? 0 : 1;
-            //Music_Easy.GetComponentInParent<AudioSource>().Play();
-            //    Music_Easy
-            // Open/close pause menu
-
-            AudioSource currentMusic = null;
-            if (diff == 0)
-            {
-                currentMusic = Music_Easy;
-            }
-            else
-            {
-                currentMusic = Music_Hard;
-            }
-
-            if (gamePaused)
-            { 
-                currentMusic.Pause();
-            } 
-            else
-            {
-                currentMusic.Play();
-            }
+            TogglePauseMenu();
         }
 
         float currentScore = Mathf.SmoothDamp(Laughbar.value, Score, ref sliderVelocity, 100 * Time.deltaTime);
@@ -270,6 +249,34 @@ public class Counter : MonoBehaviour
         }
     }
 
+    public void TogglePauseMenu()
+    {
+        gamePaused = !gamePaused;
+
+        Time.timeScale = gamePaused ? 0 : 1;
+
+        AudioSource currentMusic = null;
+        if (diff == 0)
+        {
+            currentMusic = Music_Easy;
+        }
+        else
+        {
+            currentMusic = Music_Hard;
+        }
+
+        if (gamePaused)
+        {
+            currentMusic.Pause();
+        }
+        else
+        {
+            currentMusic.Play();
+        }
+
+        pausePanel.gameObject.SetActive(gamePaused);
+    }
+
     public void LoadWinScene()
     {
         SceneManager.LoadScene("Scenes/WinScene");
@@ -278,6 +285,11 @@ public class Counter : MonoBehaviour
     public void LoadGameOverScene()
     {
         SceneManager.LoadScene("Scenes/GameOverScene");
+    }
+
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("Scenes/MenuScene");
     }
 
     /*private void DisableArrowsForTag(string tag)
