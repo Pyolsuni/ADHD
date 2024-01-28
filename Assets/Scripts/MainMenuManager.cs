@@ -14,6 +14,8 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
+        //DontDestroyOnLoad(target:this);
+
         mainMenuButtons.SetActive(true);
         difficultyButtons.SetActive(false);
         creditsPanel.SetActive(false);
@@ -35,6 +37,7 @@ public class MainMenuManager : MonoBehaviour
     {
         Debug.Log("difficulty chosen: " + difficulty);
         PlayerPrefs.SetInt("difficulty", difficulty);
+        Debug.Log(PlayerPrefs.GetInt("difficulty"));
         SceneManager.LoadScene("Scenes/GameplayScene");
     }
 

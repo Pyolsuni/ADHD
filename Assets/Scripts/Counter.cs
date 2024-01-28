@@ -31,13 +31,18 @@ public class Counter : MonoBehaviour
 
     public Animation gameOverAnimation;
 
+    public GameObject ArrowSpawner_Hard;
+    public GameObject ArrowSpawner_Easy;
+    public GameObject Music_Hard;
+    public GameObject Music_Easy;
+
     public TextMeshProUGUI QueenText;
-    private string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
-    private string tqueen1 = "A jester of thy caliber belongs in the shadows, not the spotlight.";
-    private string tqueen2 = "Thou shall Make Me Laugh More.";
-    private string tqueen3 = "A rustic charm, fit for those with simpler inclinations.";
-    private string tqueen4 = "You know, you are more nimble than you look.";
-    private string tqueen5 = "Thy dance hath stirred laughter in our souls, a merry jig of jests!";
+    private readonly string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
+    private readonly string tqueen1 = "A jester of thy caliber belongs in the shadows, not the spotlight.";
+    private readonly string tqueen2 = "Thou shall Make Me Laugh More.";
+    private readonly string tqueen3 = "A rustic charm, fit for those with simpler inclinations.";
+    private readonly string tqueen4 = "You know, you are more nimble than you look.";
+    private readonly string tqueen5 = "Thy dance hath stirred laughter in our souls, a merry jig of jests!";
 
     public int Combo
     {
@@ -70,8 +75,22 @@ public class Counter : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(PlayerPrefs.GetInt("difficulty"));
+        int Diff = PlayerPrefs.GetInt("difficulty");
+        Debug.Log(Diff);
         Combo = 0;
         Score = 30;
+
+        if (Diff == 0)
+        {
+            ArrowSpawner_Easy.SetActive(true);
+            Music_Easy.SetActive(true);
+        }
+        if (Diff == 1)
+        {
+            ArrowSpawner_Hard.SetActive(true);
+            Music_Hard.SetActive(true);
+        }
     }
 
     private void Awake()
@@ -186,15 +205,21 @@ public class Counter : MonoBehaviour
 
         if (score == 0 && !gameOver)
         {
+            Debug.Log(gameOver);
             gameOver = true;
+            ArrowSpawner_Hard.SetActive(false);
+            ArrowSpawner_Easy.SetActive(false);
+            Music_Hard.SetActive(false);
+            Music_Easy.SetActive(false);
 
+            /*
             // Pause spawners and arrows
             DisableArrowsForTag("Up");
             DisableArrowsForTag("Left");
             DisableArrowsForTag("Right");
             DisableArrowsForTag("Down");
 
-            DisableSpawners();
+            DisableSpawners();*/
 
             // Play the game over animation
             gameOverAnimation.Play();
@@ -230,4 +255,16 @@ public class Counter : MonoBehaviour
             }
         };
     }*/
+
+    public void CleanChildren()
+    {
+        for (int i = 0; i < ArrowSpawner_Hard.transform.childCount; i++)
+        {
+            Destroy(ArrowSpawner_Hard.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < ArrowSpawner_Easy.transform.childCount; i++)
+        {
+            Destroy(ArrowSpawner_Easy.transform.GetChild(i).gameObject);
+        }
+    }
 }
