@@ -16,6 +16,7 @@ public class Counter : MonoBehaviour
     private int combo;
     private bool gameOver = false;
     private bool gamePaused = false;
+    private int Diff;
 
     /*
     public GameObject Jester0;
@@ -35,8 +36,8 @@ public class Counter : MonoBehaviour
 
     public GameObject ArrowSpawner_Hard;
     public GameObject ArrowSpawner_Easy;
-    public GameObject Music_Hard;
-    public GameObject Music_Easy;
+    public AudioSource Music_Hard;
+    public AudioSource Music_Easy;
 
     public TextMeshProUGUI QueenText;
     private readonly string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
@@ -79,7 +80,7 @@ public class Counter : MonoBehaviour
     {
 
         Debug.Log(PlayerPrefs.GetInt("difficulty"));
-        int Diff = PlayerPrefs.GetInt("difficulty");
+        Diff = PlayerPrefs.GetInt("difficulty", 0);
         Debug.Log(Diff);
         Combo = 0;
         Score = 30;
@@ -87,12 +88,12 @@ public class Counter : MonoBehaviour
         if (Diff == 0)
         {
             ArrowSpawner_Easy.SetActive(true);
-            Music_Easy.SetActive(true);
+            Music_Easy.Play();
         }
         if (Diff == 1)
         {
             ArrowSpawner_Hard.SetActive(true);
-            Music_Hard.SetActive(true);
+            Music_Hard.Play();
         }
     }
 
@@ -110,7 +111,25 @@ public class Counter : MonoBehaviour
             //Music_Easy.GetComponentInParent<AudioSource>().Play();
             //    Music_Easy
             // Open/close pause menu
-            Music_Easy.
+
+            AudioSource currentMusic = null;
+            if (Diff == 0)
+            {
+                currentMusic = Music_Easy;
+            }
+            else
+            {
+                currentMusic = Music_Hard;
+            }
+
+            if (gamePaused)
+            { 
+                currentMusic.Pause();
+            } 
+            else
+            {
+                currentMusic.Play();
+            }
         }
 
         float currentScore = Mathf.SmoothDamp(Laughbar.value, Score, ref sliderVelocity, 100 * Time.deltaTime);
@@ -217,8 +236,8 @@ public class Counter : MonoBehaviour
             gameOver = true;
             ArrowSpawner_Hard.SetActive(false);
             ArrowSpawner_Easy.SetActive(false);
-            Music_Hard.SetActive(false);
-            Music_Easy.SetActive(false);
+            Music_Hard.Stop();
+            Music_Easy.Stop();
 
             /*
             // Pause spawners and arrows

@@ -2456,7 +2456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &521393011
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2468,7 +2468,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb0ec7c2c74eda540af5c861cc800fb6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5337,7 +5337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1497526297
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5349,7 +5349,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5baffae8eab075046ad1099c310083d1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5923,12 +5923,10 @@ MonoBehaviour:
   Queen4: {fileID: 498412292}
   Queen5: {fileID: 358445515}
   animationPlayer: {fileID: 1666383156}
-  gameOverAnimationClip: {fileID: 7400000, guid: c94d5da3b05860f4f802b121fd50507e, type: 2}
-  winAnimationClip: {fileID: 7400000, guid: d75631cccda932b4dbb6babb8a14a678, type: 2}
   ArrowSpawner_Hard: {fileID: 1704609850}
   ArrowSpawner_Easy: {fileID: 530761137}
-  Music_Hard: {fileID: 521393010}
-  Music_Easy: {fileID: 1497526296}
+  Music_Hard: {fileID: 521393011}
+  Music_Easy: {fileID: 1497526297}
   QueenText: {fileID: 125520151}
 --- !u!111 &1666383156
 Animation:
