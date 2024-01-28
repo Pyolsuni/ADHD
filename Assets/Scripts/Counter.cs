@@ -31,7 +31,9 @@ public class Counter : MonoBehaviour
     public GameObject Queen4;
     public GameObject Queen5;
 
-    public Animation gameOverAnimation;
+    public Animation animationPlayer;
+    public AnimationClip gameOverAnimationClip;
+    public AnimationClip winAnimationClip;
 
     public GameObject ArrowSpawner_Hard;
     public GameObject ArrowSpawner_Easy;
@@ -77,6 +79,9 @@ public class Counter : MonoBehaviour
 
     void Start()
     {
+        animationPlayer.AddClip(gameOverAnimationClip, "gameover");
+        animationPlayer.AddClip(winAnimationClip, "win");
+
         Debug.Log(PlayerPrefs.GetInt("difficulty"));
         int Diff = PlayerPrefs.GetInt("difficulty");
         Debug.Log(Diff);
@@ -228,8 +233,13 @@ public class Counter : MonoBehaviour
             DisableSpawners();*/
 
             // Play the game over animation
-            gameOverAnimation.Play();
+            animationPlayer.Play("gameover");
         }
+    }
+
+    public void LoadWinScene()
+    {
+        SceneManager.LoadScene("Scenes/WinScene");
     }
 
     public void LoadGameOverScene()

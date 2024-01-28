@@ -5922,7 +5922,9 @@ MonoBehaviour:
   Queen3: {fileID: 1466762339}
   Queen4: {fileID: 498412292}
   Queen5: {fileID: 358445515}
-  gameOverAnimation: {fileID: 1666383156}
+  animationPlayer: {fileID: 1666383156}
+  gameOverAnimationClip: {fileID: 7400000, guid: c94d5da3b05860f4f802b121fd50507e, type: 2}
+  winAnimationClip: {fileID: 7400000, guid: d75631cccda932b4dbb6babb8a14a678, type: 2}
   ArrowSpawner_Hard: {fileID: 1704609850}
   ArrowSpawner_Easy: {fileID: 530761137}
   Music_Hard: {fileID: 521393010}
@@ -5937,11 +5939,10 @@ Animation:
   m_GameObject: {fileID: 1666383153}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c94d5da3b05860f4f802b121fd50507e, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: c94d5da3b05860f4f802b121fd50507e, type: 2}
+  m_Animation: {fileID: 0}
+  m_Animations: []
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &1669564082
