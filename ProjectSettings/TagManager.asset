@@ -12,6 +12,7 @@ TagManager:
   - Perfect
   - Good
   - Ok
+  - Spawner
   layers:
   - Default
   - TransparentFX

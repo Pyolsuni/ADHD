@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: dd4181d6944d0c44da3fc97349c94e29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -174,3 +174,4 @@ MonoBehaviour:
   speed: 3
   Arrow_Movement: {x: 0, y: 1, z: 0}
   MissSound: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+  Destruction: {fileID: 2462975644586352539, guid: d082348e8e1884548bc0ae65b27c48e8, type: 3}
