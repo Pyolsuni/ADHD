@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Counter : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class Counter : MonoBehaviour
     public GameObject ArrowSpawner_Easy;
     public AudioSource Music_Hard;
     public AudioSource Music_Easy;
+
+    public AudioClip getStreak;
 
     public TextMeshProUGUI QueenText;
     private readonly string tqueen0 = "Incompetent varlet! Dost thou take delight in disgracing thyself before nobility ?";
@@ -144,6 +147,7 @@ public class Counter : MonoBehaviour
         }
         else if (Combo >= 20)
         {
+            AudioSource.PlayClipAtPoint(getStreak, transform.position);
             Crowd0.SetActive(true);
             Crowd1.SetActive(true);
             Crowd2.SetActive(true);

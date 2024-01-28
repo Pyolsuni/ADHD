@@ -2103,6 +2103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2898,9 +2902,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -2909,6 +2917,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
@@ -6195,6 +6207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7182,9 +7198,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -7193,6 +7213,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
@@ -7322,6 +7346,7 @@ MonoBehaviour:
   ArrowSpawner_Easy: {fileID: 530761137}
   Music_Hard: {fileID: 521393011}
   Music_Easy: {fileID: 1497526297}
+  getStreak: {fileID: 8300000, guid: 60884e3f0e749714aae5bde9b5a662f7, type: 3}
   QueenText: {fileID: 125520151}
   pausePanel: {fileID: 1923393735}
 --- !u!111 &1666383156
@@ -7388,6 +7413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7781,9 +7810,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -7792,6 +7825,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
@@ -9445,6 +9482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutofBoundsCheck
       objectReference: {fileID: 0}
+    - target: {fileID: 5378937664332912456, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40966f74768194e9aba86857110dde, type: 3}
     - target: {fileID: 7711855292069563815, guid: 7bf3c55396669c24c87b6d9e9e5ee7f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9515,9 +9556,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: GoodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: MissSound
       value: 
-      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+      objectReference: {fileID: 8300000, guid: af1143f4f030f8d4a8c0ae13202df13d, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: DistanceGood
       value: 0.5
@@ -9526,6 +9571,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: PerfectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 253514d859d134c48941b101cd5f75d7, type: 3}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: animSelector
       value: 
