@@ -212,8 +212,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1943737389}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+      - m_Target: {fileID: 1943737390}
+        m_TargetAssemblyTypeName: VolumeSliderManager, Assembly-CSharp
         m_MethodName: OnVolumeSliderChanged
         m_Mode: 1
         m_Arguments:
@@ -3798,6 +3798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943737388}
   - component: {fileID: 1943737389}
+  - component: {fileID: 1943737390}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -3835,6 +3836,19 @@ MonoBehaviour:
   mainMenuButtons: {fileID: 383429998}
   difficultyButtons: {fileID: 794662672}
   creditsPanel: {fileID: 2088015561}
+--- !u!114 &1943737390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943737386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a43cb5028c8a54e9b11edc7b7dedef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 11755670}
 --- !u!1 &1981484384
 GameObject:
   m_ObjectHideFlags: 0
