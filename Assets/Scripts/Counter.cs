@@ -100,7 +100,7 @@ public class Counter : MonoBehaviour
         }
         currentMusic.Play();
 
-        endTime = Time.time + currentMusic.clip.length;
+        endTime = Time.time + currentMusic.clip.length + 2;
         Debug.Log(endTime);
     }
 
@@ -262,7 +262,8 @@ public class Counter : MonoBehaviour
         if (Time.time > endTime && !gameOver)
         {
             gameOver = true;
-            animationPlayer.Play("delayed_win_scene_change");
+            //animationPlayer.Play("delayed_win_scene_change");
+            LoadWinScene();
         }
     }
 
