@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ArrowMovement : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed;
     public Vector3 Arrow_Movement;
     public AudioClip MissSound;
     //public Transform Destruction;
