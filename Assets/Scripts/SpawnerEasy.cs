@@ -13,6 +13,8 @@ public class SpawnerEasy : MonoBehaviour
     public GameObject arrowRight;
 
     private MapData mapData;
+    
+    //private List<Coroutine> spawnerCoroutines = new List<Coroutine>();
 
     [System.Serializable]
     public class ArrowData
@@ -45,6 +47,7 @@ public class SpawnerEasy : MonoBehaviour
 
 
             StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime));
+            //spawnerCoroutines.Add(StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime)));
         }
     }
 
@@ -110,4 +113,9 @@ public class SpawnerEasy : MonoBehaviour
                 return;
         }
     }
+
+    /*public void StopSpawner()
+    {
+        spawnerCoroutines.ForEach(coroutine => { if (coroutine != null) { StopCoroutine(coroutine); } });
+    }*/
 }
