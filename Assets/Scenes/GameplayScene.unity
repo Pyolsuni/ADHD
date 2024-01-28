@@ -5916,10 +5916,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Laughbar: {fileID: 770260420}
   sliderVelocity: 0
-  Jester0: {fileID: 200203903}
-  Jester3: {fileID: 582887919}
-  Jester5: {fileID: 416325389}
-  Jester8: {fileID: 1121023501}
   Queen0: {fileID: 1465777121}
   Queen1: {fileID: 715929313}
   Queen2: {fileID: 303453617}
