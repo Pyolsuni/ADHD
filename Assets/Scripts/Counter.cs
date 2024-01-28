@@ -206,7 +206,7 @@ public class Counter : MonoBehaviour
         SceneManager.LoadScene("Scenes/GameOverScene");
     }
 
-    private void DisableArrowsForTag(string tag)
+    /*private void DisableArrowsForTag(string tag)
     {
         foreach (var item in GameObject.FindGameObjectsWithTag(tag))
         {
@@ -229,5 +229,5 @@ public class Counter : MonoBehaviour
                 Debug.Log("Stopped easy spawner");
             }
         };
-    }
+    }*/
 }
