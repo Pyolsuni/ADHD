@@ -2726,7 +2726,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: GoodPoint
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistanceGood
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: PerfectPoint
@@ -2736,6 +2744,10 @@ PrefabInstance:
       propertyPath: animSelector
       value: 
       objectReference: {fileID: 301194987}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistancePerfect
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -3326,13 +3338,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PerfectSound: {fileID: 8300000, guid: ef034a393d725614998a4764730c54d3, type: 3}
   GoodSound: {fileID: 8300000, guid: ef034a393d725614998a4764730c54d3, type: 3}
-  OkSound: {fileID: 8300000, guid: ef034a393d725614998a4764730c54d3, type: 3}
+  MissSound: {fileID: 0}
   DistancePerfect: 0.5
   DistanceGood: 0.8
-  DistanceOk: 1
   PerfectPoint: 0
   GoodPoint: 0
-  OkPoint: 0
+  MissPoint: -5
   keyCode: 0
   animSelector: {fileID: 0}
   frameNr: 0
@@ -6252,7 +6263,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: GoodPoint
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistanceGood
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: PerfectPoint
@@ -6262,6 +6281,10 @@ PrefabInstance:
       propertyPath: animSelector
       value: 
       objectReference: {fileID: 301194987}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistancePerfect
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -6751,7 +6774,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: GoodPoint
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistanceGood
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: PerfectPoint
@@ -6761,6 +6792,10 @@ PrefabInstance:
       propertyPath: animSelector
       value: 
       objectReference: {fileID: 301194987}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistancePerfect
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -8304,7 +8339,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: GoodPoint
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: MissSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistanceGood
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: PerfectPoint
@@ -8314,6 +8357,10 @@ PrefabInstance:
       propertyPath: animSelector
       value: 
       objectReference: {fileID: 301194987}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: DistancePerfect
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
