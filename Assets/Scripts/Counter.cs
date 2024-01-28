@@ -17,10 +17,12 @@ public class Counter : MonoBehaviour
     private bool gameOver = false;
     private bool gamePaused = false;
 
+    /*
     public GameObject Jester0;
     public GameObject Jester3;
     public GameObject Jester5;
     public GameObject Jester8;
+    */
 
     public GameObject Queen0;
     public GameObject Queen1;
@@ -114,6 +116,7 @@ public class Counter : MonoBehaviour
 
 
         //Joke-ster positions
+        /*
         if (Combo < 5)
         {
             Jester0.SetActive(true);
@@ -142,6 +145,7 @@ public class Counter : MonoBehaviour
             Jester5.SetActive(false);
             Jester8.SetActive(true);
         }
+        */
 
         //Queen positions
         if (Score < 15)

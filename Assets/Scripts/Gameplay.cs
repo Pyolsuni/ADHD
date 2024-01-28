@@ -10,6 +10,7 @@ public class Gameplay : MonoBehaviour
     public GameObject rightArrow;*/
 
     private GameObject arrowin;
+    private int combo = 1;
 
     public AudioClip PerfectSound;
     public AudioClip GoodSound;
@@ -23,9 +24,10 @@ public class Gameplay : MonoBehaviour
     public int GoodPoint;
     public int OkPoint;
 
-    private int combo = 1;
-
     public KeyCode keyCode;
+
+    public JokesterAnimationSelector animSelector;
+    public int frameNr;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,8 @@ public class Gameplay : MonoBehaviour
     {
         if (Input.GetKeyDown(keyCode) && arrowin != null)
         {
+            animSelector.SetFrameActive(frameNr);
+
             Vector3 posA = arrowin.transform.position;
             Debug.Log(posA);
             Vector3 posB = transform.position;

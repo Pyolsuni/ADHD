@@ -1626,6 +1626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 301194986}
+  - component: {fileID: 301194987}
   m_Layer: 0
   m_Name: Joke-ster
   m_TagString: Untagged
@@ -1652,6 +1653,22 @@ Transform:
   - {fileID: 582887920}
   m_Father: {fileID: 15876325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301194987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301194985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6694c9d80176c7c4c98f9e5c13eb4da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jester0: {fileID: 1121023503}
+  Jester3: {fileID: 416325391}
+  Jester5: {fileID: 200203905}
+  Jester8: {fileID: 582887921}
 --- !u!1 &303453617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,7 +2254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &416325390
 Transform:
   m_ObjectHideFlags: 0
@@ -2685,6 +2702,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: frameNr
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: keyCode
       value: 275
       objectReference: {fileID: 0}
@@ -2696,6 +2717,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: animSelector
+      value: 
+      objectReference: {fileID: 301194987}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2766,7 +2791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &582887920
 Transform:
   m_ObjectHideFlags: 0
@@ -3294,6 +3319,8 @@ MonoBehaviour:
   GoodPoint: 0
   OkPoint: 0
   keyCode: 0
+  animSelector: {fileID: 0}
+  frameNr: 0
 --- !u!61 &684987067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4429,7 +4456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1121023502
 Transform:
   m_ObjectHideFlags: 0
@@ -5764,6 +5791,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: frameNr
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: keyCode
       value: 274
       objectReference: {fileID: 0}
@@ -5775,6 +5806,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: animSelector
+      value: 
+      objectReference: {fileID: 301194987}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -6257,6 +6292,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: frameNr
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: keyCode
       value: 276
       objectReference: {fileID: 0}
@@ -6268,6 +6307,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: animSelector
+      value: 
+      objectReference: {fileID: 301194987}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -7355,6 +7398,10 @@ PrefabInstance:
       propertyPath: PerfectPoint
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4552037924779139951, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
+      propertyPath: animSelector
+      value: 
+      objectReference: {fileID: 301194987}
     - target: {fileID: 5642228735233534201, guid: c8f1b744fab097741bc66785c78ad2b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
