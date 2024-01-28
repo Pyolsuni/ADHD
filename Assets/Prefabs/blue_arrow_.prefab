@@ -174,3 +174,4 @@ MonoBehaviour:
   speed: 3
   Arrow_Movement: {x: 0, y: 1, z: 0}
   MissSound: {fileID: 8300000, guid: 80b362f08d3e2e444af6eb9860c3b907, type: 3}
+  Destruction: {fileID: 6472726601895355144, guid: bacab782e1e23df4eb611e146cb47b1a, type: 3}

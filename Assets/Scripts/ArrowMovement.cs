@@ -9,7 +9,7 @@ public class ArrowMovement : MonoBehaviour
     public float speed;
     public Vector3 Arrow_Movement;
     public AudioClip MissSound;
-    //public Transform Destruction;
+    public Transform Destruction;
     //public string TagName;
 
     void Update()
@@ -46,8 +46,8 @@ public class ArrowMovement : MonoBehaviour
     public void Delete(AudioClip Sound, int points, int combo)
     {
         AudioSource.PlayClipAtPoint(Sound, transform.position);
-        //GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;
-        //Destroy(DestructionParticles, 3.0f);
+        GameObject DestructionParticles = ((Transform)Instantiate(Destruction, this.transform.position, this.transform.rotation)).gameObject;
+        Destroy(DestructionParticles, 3.0f);
         GameObject.Destroy(gameObject);
         Counter.Instance.Combo += combo;
         Counter.Instance.Score += points;
