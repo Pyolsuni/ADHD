@@ -19,12 +19,10 @@ public class Counter : MonoBehaviour
     private int diff;
     private float endTime;
 
-    /*
-    public GameObject Jester0;
-    public GameObject Jester3;
-    public GameObject Jester5;
-    public GameObject Jester8;
-    */
+    public GameObject Crowd0;
+    public GameObject Crowd1;
+    public GameObject Crowd2;
+    public GameObject Crowd3;
 
     public GameObject Queen0;
     public GameObject Queen1;
@@ -143,37 +141,42 @@ public class Counter : MonoBehaviour
         Laughbar.value = currentScore;
 
 
-        //Joke-ster positions
-        /*
-        if (Combo < 5)
+        //Public positions
+        if (Combo > 4 && Combo < 10)
         {
-            Jester0.SetActive(true);
-            Jester3.SetActive(false);
-            Jester5.SetActive(false);
-            Jester8.SetActive(false);
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(false);
+            Crowd2.SetActive(false);
+            Crowd3.SetActive(false);
         }
-        else if (Combo < 10)
+        else if (Combo > 9 && Combo < 15)
         {
-            Jester0.SetActive(false);
-            Jester3.SetActive(true);
-            Jester5.SetActive(false);
-            Jester8.SetActive(false);
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(true);
+            Crowd2.SetActive(false);
+            Crowd3.SetActive(false);
         }
-        else if (Combo < 15)
+        else if (Combo > 14 && Combo < 20)
         {
-            Jester0.SetActive(false);
-            Jester3.SetActive(false);
-            Jester5.SetActive(true);
-            Jester8.SetActive(false);
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(true);
+            Crowd2.SetActive(true);
+            Crowd3.SetActive(false);
+        }
+        else if (Combo >= 20)
+        {
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(true);
+            Crowd2.SetActive(true);
+            Crowd3.SetActive(true);
         }
         else
         {
-            Jester0.SetActive(false);
-            Jester3.SetActive(false);
-            Jester5.SetActive(false);
-            Jester8.SetActive(true);
+            Crowd0.SetActive(false);
+            Crowd1.SetActive(false);
+            Crowd2.SetActive(false);
+            Crowd3.SetActive(false);
         }
-        */
 
         //Queen positions
         if (Score < 15)
