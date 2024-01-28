@@ -13,6 +13,8 @@ public class SpawnerEasy : MonoBehaviour
     public GameObject arrowRight;
 
     private MapData mapData;
+
+    public float delay;
     
     //private List<Coroutine> spawnerCoroutines = new List<Coroutine>();
 
@@ -39,25 +41,25 @@ public class SpawnerEasy : MonoBehaviour
         {
             float spawnTime = arrowData._time * 60 / BPM; //Remplacer 127 par le bpm de la musique
 
-            /*// Calculate travel time based on distance and arrow speed.
+            // Calculate travel time based on distance and arrow speed.
             float travelTime = CalculateTravelTime();
 
             // Adjust spawn time by subtracting travel time.
-            float adjustedSpawnTime = spawnTime - travelTime;*/
+            float adjustedSpawnTime = spawnTime - travelTime;
 
 
-            StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime));
+            StartCoroutine(SpawnArrowRoutine(arrowData, adjustedSpawnTime));
             //spawnerCoroutines.Add(StartCoroutine(SpawnArrowRoutine(arrowData, spawnTime)));
         }
     }
 
-    /*private float CalculateTravelTime()
+    private float CalculateTravelTime()
     {
         // Assuming a constant arrow speed, adjust this value based on your game's requirements.
         float arrowSpeed = 3.0f; // Adjust this value according to the speed of your arrows.
 
         // Assuming the hit zone is at position (0, 0, 0) and the spawner is at position (spawnerX, spawnerY, spawnerZ).
-        Vector3 hitZonePosition = new Vector3(0, 8, 0);
+        Vector3 hitZonePosition = new Vector3(0, delay, 0);
         Vector3 spawnerPosition = transform.position; // Assuming the script is attached to the spawner.
 
         // Calculate the distance between the spawner and the hit zone.
@@ -67,14 +69,14 @@ public class SpawnerEasy : MonoBehaviour
         float travelTime = distance / arrowSpeed;
 
         return travelTime;
-    }*/
+    }
 
-    private IEnumerator SpawnArrowRoutine(ArrowData arrowData, float spawnTime)
+    private IEnumerator SpawnArrowRoutine(ArrowData arrowData, float adjustedSpawnTime)
     {
         float startTime = Time.time;
         float elapsedTime = 0f;
 
-        while (elapsedTime < spawnTime)
+        while (elapsedTime < adjustedSpawnTime)
         {
             elapsedTime = Time.time - startTime;
             yield return null;
