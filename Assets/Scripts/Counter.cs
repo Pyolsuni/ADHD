@@ -264,6 +264,7 @@ public class Counter : MonoBehaviour
         gamePaused = !gamePaused;
 
         Time.timeScale = gamePaused ? 0 : 1;
+        Debug.Log("timeScale set to: " + Time.timeScale);
 
         AudioSource currentMusic = null;
         if (diff == 0)
@@ -289,16 +290,19 @@ public class Counter : MonoBehaviour
 
     public void LoadWinScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/WinScene");
     }
 
     public void LoadGameOverScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/GameOverScene");
     }
 
     public void LoadMenuScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/MenuScene");
     }
 
