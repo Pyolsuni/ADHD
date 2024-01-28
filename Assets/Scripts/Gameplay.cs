@@ -42,7 +42,7 @@ public class Gameplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyCode) && arrowin != null)
+        if (Input.GetKeyDown(keyCode) && arrowin != null && Time.timeScale > float.Epsilon)
         {
             animSelector.SetFrameActive(frameNr);
 

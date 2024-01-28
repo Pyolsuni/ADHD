@@ -32,8 +32,6 @@ public class Counter : MonoBehaviour
     public GameObject Queen5;
 
     public Animation animationPlayer;
-    public AnimationClip gameOverAnimationClip;
-    public AnimationClip winAnimationClip;
 
     public GameObject ArrowSpawner_Hard;
     public GameObject ArrowSpawner_Easy;
@@ -79,8 +77,6 @@ public class Counter : MonoBehaviour
 
     void Start()
     {
-        animationPlayer.AddClip(gameOverAnimationClip, "gameover");
-        animationPlayer.AddClip(winAnimationClip, "win");
 
         Debug.Log(PlayerPrefs.GetInt("difficulty"));
         int Diff = PlayerPrefs.GetInt("difficulty");
@@ -114,6 +110,7 @@ public class Counter : MonoBehaviour
             //Music_Easy.GetComponentInParent<AudioSource>().Play();
             //    Music_Easy
             // Open/close pause menu
+            Music_Easy.
         }
 
         float currentScore = Mathf.SmoothDamp(Laughbar.value, Score, ref sliderVelocity, 100 * Time.deltaTime);
@@ -233,7 +230,7 @@ public class Counter : MonoBehaviour
             DisableSpawners();*/
 
             // Play the game over animation
-            animationPlayer.Play("gameover");
+            animationPlayer.Play("delayed_game_over_scene_change");
         }
     }
 
