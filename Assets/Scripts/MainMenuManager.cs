@@ -37,7 +37,6 @@ public class MainMenuManager : MonoBehaviour
     {
         Debug.Log("difficulty chosen: " + difficulty);
         PlayerPrefs.SetInt("difficulty", difficulty);
-        Debug.Log(PlayerPrefs.GetInt("difficulty"));
         SceneManager.LoadScene("Scenes/GameplayScene");
     }
 

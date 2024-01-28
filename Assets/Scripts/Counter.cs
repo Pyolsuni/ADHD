@@ -104,6 +104,8 @@ public class Counter : MonoBehaviour
         {
             gamePaused = !gamePaused;
             Time.timeScale = gamePaused ? 0 : 1;
+            //Music_Easy.GetComponentInParent<AudioSource>().Play();
+            //    Music_Easy
             // Open/close pause menu
         }
 
