@@ -2806,6 +2806,7 @@ MonoBehaviour:
   arrowDown: {fileID: 628983175157421876, guid: 3e108072bdac0c54798f0b36a6f2f7ce, type: 3}
   arrowLeft: {fileID: 3454969674345397948, guid: af1bec4a495610745a779c26251af8d7, type: 3}
   arrowRight: {fileID: 7886039532050575325, guid: 07489655a9c8fca4c85269937645eb7e, type: 3}
+  delay: 2.667
 --- !u!1 &534922614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6668,7 +6669,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5baffae8eab075046ad1099c310083d1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cfd78da6c34cd8d49892757d4df8d017, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7785,6 +7786,7 @@ MonoBehaviour:
   arrowDown: {fileID: 628983175157421876, guid: 3e108072bdac0c54798f0b36a6f2f7ce, type: 3}
   arrowLeft: {fileID: 3454969674345397948, guid: af1bec4a495610745a779c26251af8d7, type: 3}
   arrowRight: {fileID: 7886039532050575325, guid: 07489655a9c8fca4c85269937645eb7e, type: 3}
+  delay: 0
 --- !u!1001 &1712969485
 PrefabInstance:
   m_ObjectHideFlags: 0
