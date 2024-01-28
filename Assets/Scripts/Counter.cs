@@ -19,12 +19,10 @@ public class Counter : MonoBehaviour
     private int diff;
     private float endTime;
 
-    /*
-    public GameObject Jester0;
-    public GameObject Jester3;
-    public GameObject Jester5;
-    public GameObject Jester8;
-    */
+    public GameObject Crowd0;
+    public GameObject Crowd1;
+    public GameObject Crowd2;
+    public GameObject Crowd3;
 
     public GameObject Queen0;
     public GameObject Queen1;
@@ -47,6 +45,8 @@ public class Counter : MonoBehaviour
     private readonly string tqueen3 = "A rustic charm, fit for those with simpler inclinations.";
     private readonly string tqueen4 = "You know, you are more nimble than you look.";
     private readonly string tqueen5 = "Thy dance hath stirred laughter in our souls, a merry jig of jests!";
+
+    public RectTransform pausePanel;
 
     public int Combo
     {
@@ -79,13 +79,13 @@ public class Counter : MonoBehaviour
 
     void Start()
     {
+        pausePanel.gameObject.SetActive(false);
 
         Debug.Log(PlayerPrefs.GetInt("difficulty"));
         diff = PlayerPrefs.GetInt("difficulty", 0);
         Debug.Log(diff);
         Combo = 0;
         Score = 30;
-
 
         AudioSource currentMusic = null;
         if (diff == 0)
@@ -113,67 +113,49 @@ public class Counter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gamePaused = !gamePaused;
-            Time.timeScale = gamePaused ? 0 : 1;
-            //Music_Easy.GetComponentInParent<AudioSource>().Play();
-            //    Music_Easy
-            // Open/close pause menu
-
-            AudioSource currentMusic = null;
-            if (diff == 0)
-            {
-                currentMusic = Music_Easy;
-            }
-            else
-            {
-                currentMusic = Music_Hard;
-            }
-
-            if (gamePaused)
-            { 
-                currentMusic.Pause();
-            } 
-            else
-            {
-                currentMusic.Play();
-            }
+            TogglePauseMenu();
         }
 
         float currentScore = Mathf.SmoothDamp(Laughbar.value, Score, ref sliderVelocity, 100 * Time.deltaTime);
         Laughbar.value = currentScore;
 
 
-        //Joke-ster positions
-        /*
-        if (Combo < 5)
+        //Public positions
+        if (Combo > 4 && Combo < 10)
         {
-            Jester0.SetActive(true);
-            Jester3.SetActive(false);
-            Jester5.SetActive(false);
-            Jester8.SetActive(false);
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(false);
+            Crowd2.SetActive(false);
+            Crowd3.SetActive(false);
         }
-        else if (Combo < 10)
+        else if (Combo > 9 && Combo < 15)
         {
-            Jester0.SetActive(false);
-            Jester3.SetActive(true);
-            Jester5.SetActive(false);
-            Jester8.SetActive(false);
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(true);
+            Crowd2.SetActive(false);
+            Crowd3.SetActive(false);
         }
-        else if (Combo < 15)
+        else if (Combo > 14 && Combo < 20)
         {
-            Jester0.SetActive(false);
-            Jester3.SetActive(false);
-            Jester5.SetActive(true);
-            Jester8.SetActive(false);
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(true);
+            Crowd2.SetActive(true);
+            Crowd3.SetActive(false);
+        }
+        else if (Combo >= 20)
+        {
+            Crowd0.SetActive(true);
+            Crowd1.SetActive(true);
+            Crowd2.SetActive(true);
+            Crowd3.SetActive(true);
         }
         else
         {
-            Jester0.SetActive(false);
-            Jester3.SetActive(false);
-            Jester5.SetActive(false);
-            Jester8.SetActive(true);
+            Crowd0.SetActive(false);
+            Crowd1.SetActive(false);
+            Crowd2.SetActive(false);
+            Crowd3.SetActive(false);
         }
-        */
 
         //Queen positions
         if (Score < 15)
@@ -267,6 +249,34 @@ public class Counter : MonoBehaviour
         }
     }
 
+    public void TogglePauseMenu()
+    {
+        gamePaused = !gamePaused;
+
+        Time.timeScale = gamePaused ? 0 : 1;
+
+        AudioSource currentMusic = null;
+        if (diff == 0)
+        {
+            currentMusic = Music_Easy;
+        }
+        else
+        {
+            currentMusic = Music_Hard;
+        }
+
+        if (gamePaused)
+        {
+            currentMusic.Pause();
+        }
+        else
+        {
+            currentMusic.Play();
+        }
+
+        pausePanel.gameObject.SetActive(gamePaused);
+    }
+
     public void LoadWinScene()
     {
         SceneManager.LoadScene("Scenes/WinScene");
@@ -275,6 +285,11 @@ public class Counter : MonoBehaviour
     public void LoadGameOverScene()
     {
         SceneManager.LoadScene("Scenes/GameOverScene");
+    }
+
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("Scenes/MenuScene");
     }
 
     /*private void DisableArrowsForTag(string tag)
